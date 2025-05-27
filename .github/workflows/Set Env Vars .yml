@@ -6,11 +6,13 @@ jobs:
   custom_GITHUB_ENV:
     runs-on: ubuntu-latest 
     steps:
+      # $GITHUB_ENV holds value on the fly  wrtie key value pair into github var 
+
     - name: Set the value
       id: step_one
       run: |
         echo "action_state=yellow" >> $GITHUB_ENV
-
+# $env access list of env vars and use . to get the key
     - name: Use the value
       id: step_two
       run: |
