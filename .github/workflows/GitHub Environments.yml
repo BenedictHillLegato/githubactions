@@ -18,4 +18,4 @@ jobs:
       - name: 'Print secret from environment'
         run: |
             echo "APP_SECRET: ${{ secrets.APP_SECRET  }}"
-            echo "testvar  ${{ env.testvar }}"
+            echo "testvar  ${{ env.SIT }}"
