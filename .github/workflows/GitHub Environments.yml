@@ -1,0 +1,21 @@
+name: GitHub Environments
+
+on:
+  workflow_dispatch:
+
+
+
+jobs:
+  deployment:
+    
+    runs-on: ubuntu-latest
+    environment: 
+      name: SIT
+      url: https://github.com
+      
+      # will use the envs and secrests specific to the env target
+    steps:
+      - name: 'Print secret from environment'
+        run: |
+            echo "APP_SECRET: ${{ secrets.APP_SECRET  }}"
+            echo "testvar  ${{ env.testvar }}"
