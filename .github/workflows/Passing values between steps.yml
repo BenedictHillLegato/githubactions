@@ -10,7 +10,7 @@ jobs:
       run: |
         echo "variableName=this-is-value" >> $GITHUB_ENV
 
-
+# :: is used to invoke github action coomands and asign a value to varible in step 
     - name: Create-Variables
       id: var_source_step
       run: |
@@ -18,7 +18,7 @@ jobs:
         echo "::set-output name=var1_name::TechSckool"
         echo "::set-output name=var2_date::$(date +'%Y-%m-%d-%H-%M')"
     
-
+# access steps look at all steps in this job gotto step id ver_source_step goto outputs and get value of the variable
     - name: Get-Variable-Value
       run: |
         echo "Printing the values"
