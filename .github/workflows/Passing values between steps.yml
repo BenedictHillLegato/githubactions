@@ -15,8 +15,8 @@ jobs:
       id: var_source_step
       run: |
         echo "Performing a random task"
-        echo "::set-output name=var1_name::TechSckool"
         echo "::set-output name=var2_date::$(date +'%Y-%m-%d-%H-%M')"
+        echo "var1_name=TechSckool" >> $GITHUB_OUTPUT
     
 # access steps look at all steps in this job gotto step id ver_source_step goto outputs and get value of the variable
     - name: Get-Variable-Value
