@@ -18,4 +18,6 @@ jobs:
       - name: 'Print secret from environment'
         run: |
             echo "APP_SECRET: ${{ secrets.APP_SECRET  }}"
-            echo "${{ vars.SIT }}"
+            echo "The value of MY_VAR in the dev environment is ${{ env.MY_VAR }}"
+            echo "The value of MY_VAR in the dev environment is ${{ vars.MY_VAR }}"
+
